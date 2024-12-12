@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Work_Sans } from 'next/font/google'
 import './globals.css'
 import { Providers } from '@/components/providers/Providers'
 
-const inter = Inter({ subsets: ['latin'] })
+const work = Work_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'PeakEye',
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
 
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={work.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
