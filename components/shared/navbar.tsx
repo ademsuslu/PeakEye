@@ -15,7 +15,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between items-center text-end  w-full  m-auto h-[100px] px-4  gap-28'>
+    <div className='flex justify-between items-center text-end  w-full  m-auto h-[100px] px-4 max-w-[992px]  gap-28'>
       <Logo />
         <Navlinks />
         <NavbarRight />
