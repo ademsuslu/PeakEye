@@ -1,13 +1,14 @@
 import React from 'react'
 import { Navbardata } from "@/data/data"
+import Link from 'next/link'
 const Navlinks = () => {
   return (
     <div className='hidden md:flex '>
       {
         Navbardata.map((item, index) => (
-          <a href={item.href} key={index} className='px-4 py-2 hover:text-gray-900'>
+          <Link href={item.href} key={index} className='px-4 py-2'>
             {item.name}
-          </a>
+          </Link>
         ))
 
       }

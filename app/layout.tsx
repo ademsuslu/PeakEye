@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: 'PeakEye',
   description: 'PeakEye Bilişim Teknolojileri A.Ş',
 }
+import { ThemeProvider } from "@/components/providers/theme-providers"
+
 
 export default function RootLayout({
   children,
@@ -16,11 +18,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
+    <ThemeProvider             
+    attribute="class"
+    defaultTheme="system"
+>
         <Providers>
           {children}
         </Providers>
+        </ThemeProvider>
         </body>
     </html>
   )
