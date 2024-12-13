@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { FaVoicemail } from "react-icons/fa"
 
 const formSchema = z.object({
     email: z.string()
@@ -37,21 +38,22 @@ export function SubsForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 flex flex-col items-center justify-center min-w-[300px] ">
         <FormField
+    
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
+            <FormItem className="w-full">
+              <FormControl className="w-full">
                 <Input placeholder="Your Email" {...field} />
               </FormControl>
+                <FaVoicemail/>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Subscribe</Button>
+        <Button className="w-full" type="submit">Subscribe</Button>
       </form>
     </Form>
   )

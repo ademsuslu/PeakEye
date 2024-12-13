@@ -57,7 +57,7 @@ const Footer = () => {
           <div className='bg-[#FFFFFF] dark:bg-[#242535] rounded-lg p-4 flex flex-col items-center justify-center min-w-[392px]'>
             <h1 className='font-bold'>Weekly Newsletter</h1>
             <p className='text-sm mt-1'>Get blog articles and offers via email</p>
-            <div className='flex flex-col'>
+            <div className='flex flex-col mt-8'>
               <div className='flex flex-col items-start justify-normal'>
               <SubsForm /> 
               </div>
