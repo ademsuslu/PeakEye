@@ -6,12 +6,11 @@ import { Providers } from '@/components/providers/Providers'
 const work = Work_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'PeakEye',
-  description: 'PeakEye Bilişim Teknolojileri A.Ş',
+  title: 'MetaBlog',
+  description: 'MetaBlog Blog',
 }
+
 import { ThemeProvider } from "@/components/providers/theme-providers"
-
-
 export default function RootLayout({
   children,
 }: {
