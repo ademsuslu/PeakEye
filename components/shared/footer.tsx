@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Logo from './logo'
+import { FootercategoryLinkData, FooterQuickLinkData } from '@/data/data'
 
 const Footer = () => {
   return (
@@ -12,16 +13,16 @@ const Footer = () => {
             <h1 className='mb-3 font-bold'>
               About
             </h1>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+            <span className='text-[#97989F]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
           </div>
           <div className='flex flex-col mt-6 space-y-1'>
-            <Link href="mailto:info@jstemplate.net">
-              <span className='font-bold mr-1'>
+            <Link className='text-[#97989F]' href="mailto:info@jstemplate.net">
+              <span className='font-bold mr-1 text-white'>
                 Email:
               </span> info@jstemplate.net
             </Link>
-            <Link href="tel:+880123456789">
-              <span className='font-bold mr-1'>
+            <Link className='text-[#97989F]' href="tel:+880123456789">
+              <span className='font-bold mr-1 text-white'>
                 Phone:
 
               </span>
@@ -29,13 +30,73 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        {/* <div className="...">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt laboriosam dolor ex fugit quas ad magni ducimus dolorem quis, explicabo, cum voluptatibus voluptates velit consectetur sequi perferendis, recusandae molestiae?
+
+        <div className="flex justify-start md:justify-around items-center">
+          <div>
+            <div className='flex flex-col'>
+              <h1 className='mb-3 font-bold'>
+                Quick Link
+              </h1>
+            </div>
+            <div className='flex flex-col  space-y-1'>
+             {
+              FooterQuickLinkData.map((data,index) =>{
+                return  <Link key={index} className='text-[#97989F]' href={data.href}>
+              {data.name}
+              </Link>
+              })
+            }
+            
+             
+            </div>
           </div>
-        <div className="...">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt laboriosam dolor ex fugit quas ad magni ducimus dolorem quis, explicabo, cum voluptatibus voluptates velit consectetur sequi perferendis, recusandae molestiae?
-          </div> */}
+          <div>
+            <div className='flex flex-col'>
+              <h1 className='mb-3 font-bold'>
+              Category
+              </h1>
+            </div>
+            <div className='flex flex-col  space-y-1'>
+             {
+              FootercategoryLinkData.map((data,index) =>{
+                return  <Link key={index} className='text-[#97989F]' href={data.href}>
+              {data.name}
+              </Link>
+              })
+            }
+            
+             
+            </div>
+          </div>
+         
+        </div>
+
+        <div className="flex flex-col">
+          <div className='flex flex-col'>
+            <h1 className='mb-3 font-bold'>
+              About
+            </h1>
+            <span className='text-[#97989F]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+          </div>
+          <div className='flex flex-col mt-6 space-y-1'>
+            <Link className='text-[#97989F]' href="mailto:info@jstemplate.net">
+              <span className='font-bold mr-1 text-white'>
+                Email:
+              </span> info@jstemplate.net
+            </Link>
+            <Link className='text-[#97989F]' href="tel:+880123456789">
+              <span className='font-bold mr-1 text-white'>
+                Phone:
+
+              </span>
+              880 123 456 789
+            </Link>
+          </div>
+        </div>
+
       </div>
+
+      {/* bottom footer */}
       <div className='mt-16'>
         <hr />
         <div className='flex flex-col md:flex-row justify-between items-center mt-8'>
