@@ -15,13 +15,6 @@ const config: Config = {
 			},
 
 
-			container: {
-				center: true,
-				padding: '8rem',
-				screens: {
-					'2xl': '1400px',
-				},
-			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

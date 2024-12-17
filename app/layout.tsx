@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 }
 
 import { ThemeProvider } from "@/components/providers/theme-providers"
-import { cn } from '@/lib/utils'
 export default function RootLayout({
   children,
 }: {
@@ -22,10 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       
       <body
-        className={cn(
-          'min-h-screen',
-          work.className,
-        )}  suppressHydrationWarning>
+        className={work.className}  suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

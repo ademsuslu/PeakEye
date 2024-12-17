@@ -8,9 +8,10 @@ interface ProvidersProps {
 }
 export const Providers: FC<ProvidersProps> = ({ children }) => {
     return (
-        <div className="flex flex-col  w-full min-h-[calc(100vh-10.5rem-1px)]">
+        <div className="flex flex-col px-2 md:px-8 lg:px-32 w-full">
+         
             <Navbar/>
-            <main className="flex-1 w-full  flex flex-col h-full">
+            <main className="flex-1  flex flex-col h-full">
              {children}
             </main>
             <Footer/>

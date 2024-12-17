@@ -5,7 +5,7 @@ import { ModeToggle } from './ModeToggle'
 
 const NavbarRight = () => {
   return (
-    <div className='hidden md:flex gap-10 p-2 '>
+    <div className='hidden lg:flex  lg:space-x-6 '>
       <Search  />
       <ModeToggle/>
     </div>
