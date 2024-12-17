@@ -18,7 +18,7 @@ const Navlinks = () => {
         <Link
           href={item.href}
           key={index}
-          className={`px-4 text-sm py-2 whitespace-nowrap ${
+          className={`px-4 text-md py-2 whitespace-nowrap ${
             active === item.href ? "text-blue-500 font-bold" : ""
           }`}
         >
