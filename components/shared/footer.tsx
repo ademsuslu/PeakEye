@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import Logo from './logo'
 import { FootercategoryLinkData, FooterQuickLinkData } from '@/data/data'
+import { SubsForm } from './subscribe-form'
 
 const Footer = () => {
   return (
@@ -71,27 +72,14 @@ const Footer = () => {
          
         </div>
 
-        <div className="flex flex-col">
-          <div className='flex flex-col'>
-            <h1 className='mb-3 font-bold'>
-              About
+        <div className="flex flex-col bg-[#242535] rounded-md p-8">
+          <div className='flex flex-col justify-center items-center mb-8'>
+            <h1 className='mb-1 font-bold'>
+            Weekly Newsletter
             </h1>
-            <span className='text-[#97989F]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+            <span className='text-[#97989F]'>Get blog articles and offers via email</span>
           </div>
-          <div className='flex flex-col mt-6 space-y-1'>
-            <Link className='text-[#97989F]' href="mailto:info@jstemplate.net">
-              <span className='font-bold mr-1 text-white'>
-                Email:
-              </span> info@jstemplate.net
-            </Link>
-            <Link className='text-[#97989F]' href="tel:+880123456789">
-              <span className='font-bold mr-1 text-white'>
-                Phone:
-
-              </span>
-              880 123 456 789
-            </Link>
-          </div>
+          <SubsForm/>
         </div>
 
       </div>
