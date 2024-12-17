@@ -1,7 +1,8 @@
 "use client"
 import { FC, ReactNode} from "react"
-import Navbar from "../shared/navbar"
-import Footer from "../shared/Footer"
+import Navbar from "@/components/shared/navbar"
+import Footer from "@/components/shared/Footer"
+
 
 interface ProvidersProps {
     children: ReactNode
