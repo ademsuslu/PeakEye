@@ -81,4 +81,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  .hero {
+    background-image: url('/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
