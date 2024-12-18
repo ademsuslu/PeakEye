@@ -1,3 +1,4 @@
+import BlogAds from '@/components/shared/blog-ads'
 import BreadCrumps from '@/components/shared/breadCrumps'
 import Hero from '@/components/shared/Hero'
 import LastPostList from '@/components/shared/last-post-list'
@@ -11,7 +12,8 @@ export default function BlogPage() {
       <Hero/>
       <div className="mt-12"/>
       <LastPostList/>
-      reklam
+      <div className="mt-12"/>
+      <BlogAds/>
     </div>
   )
 }

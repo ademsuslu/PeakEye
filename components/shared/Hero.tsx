@@ -18,8 +18,8 @@ const Hero = () => {
                         <AvatarImage src="https://github.com/shadcn.png" />
                         <AvatarFallback>TW</AvatarFallback>
                     </Avatar>
-                    <span className="ml-3 whitespace-nowrap">Tracey Wilson</span>
-                    <span className="ml-4 whitespace-nowrap">August 20, 2022</span>
+                    <span className="ml-3 ">Tracey Wilson</span>
+                    <span className="ml-4 ">August 20, 2022</span>
                     
                 </div>
             </div>
