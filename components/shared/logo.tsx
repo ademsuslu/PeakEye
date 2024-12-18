@@ -3,17 +3,17 @@
 import { useTheme } from "next-themes"
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 const Logo = () => {
+  const [firstTheme,setFirstTheme]= useState<string | undefined>("")
   const { theme } = useTheme()
   useEffect(() => {
-  
+    setFirstTheme(theme) // Get initial theme on first render
   }, [theme])
-  
 
   return (
     <div>
-      {theme === "dark" ?
+      {firstTheme === "dark" ?
        <Link  href={"/"} >
            <Image width={158} className="!min-w-[158px]" height={36} src="/image.png" alt="Dark_logo" />
         </Link>
