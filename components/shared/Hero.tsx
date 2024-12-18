@@ -10,7 +10,7 @@ const Hero = () => {
                 <div className="mb-4">
                     <Button  className="text-white">Technology</Button>
                 </div>
-                <h1 className="text-[36px] font-bold hidden md:block">
+                <h1 className="text-[36px] font-bold hidden md:block leading-tight	">
                     The Impact of Technology on the Workplace: How Technology is Changing
                 </h1>
                 <div className="flex items-center mt-6">
@@ -18,8 +18,8 @@ const Hero = () => {
                         <AvatarImage src="https://github.com/shadcn.png" />
                         <AvatarFallback>TW</AvatarFallback>
                     </Avatar>
-                    <span className="ml-3">Tracey Wilson</span>
-                    <span className="ml-4">August 20, 2022</span>
+                    <span className="ml-3 whitespace-nowrap">Tracey Wilson</span>
+                    <span className="ml-4 whitespace-nowrap">August 20, 2022</span>
                     
                 </div>
             </div>
