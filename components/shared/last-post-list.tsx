@@ -9,7 +9,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
 const LastPostList = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+       <div className="flex flex-col">
+
+
+       <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
            {
              Array.from({ length: 9 }, (_, index) => index + 1).map((index) => {
                 return <Card key={index} className="flex md:flex-col p-0 m-0">
@@ -35,6 +38,11 @@ const LastPostList = () => {
                 </CardContent>
             </Card>
             })}
+
+        </div>
+        <div className="w-full flex justify-center items-start mt-8">
+            <Button variant={"outline"}>View All Post</Button>
+        </div>
         </div>
     )
 }
