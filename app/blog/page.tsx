@@ -1,5 +1,6 @@
 import BreadCrumps from '@/components/shared/breadCrumps'
 import Hero from '@/components/shared/Hero'
+import LastPostList from '@/components/shared/last-post-list'
 import React from 'react'
 
 export default function BlogPage() {
@@ -9,7 +10,7 @@ export default function BlogPage() {
       <div className="mt-12"/>
       <Hero/>
       <div className="mt-12"/>
-      LastPost List
+      <LastPostList/>
       reklam
     </div>
   )
