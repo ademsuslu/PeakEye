@@ -10,8 +10,8 @@ const Source_Serif = Source_Serif_4({ subsets: ['latin'] })
 
 export default function SinglePost() {
   return (
-    <div>
-      <div className='flex  flex-col m-10'>
+    <div className='grid grid-cols-1 md:grid-cols-6  '>
+      <div className='flex  flex-col my-10  md:col-start-2 md:col-span-4 '>
         <div className='flex  flex-col max-w-[720px]'>
           <div className="mb-4">
             <Button className="text-white">Technology</Button>
@@ -63,7 +63,7 @@ export default function SinglePost() {
             Vitae sapien pellentesque habitant morbi tristique. Luctus venenatis lectus magna fringilla. Nec ullamcorper sit amet risus nullam eget felis. Tincidunt arcu non sodales neque sodales ut etiam sit amet.
           </span>
         </div>
-        <Card className='w-full max-h-[128px] flex items-center justify-center p-8 bg-[#F6F6F7] dark:bg-[#242535] border-l-4   border-l-[#242535] dark:border-l-[#F6F6F7]'>
+        <Card className='w-full  flex items-center justify-center p-8 bg-[#F6F6F7] dark:bg-[#242535] border-l-4   border-l-[#242535] dark:border-l-[#F6F6F7]'>
           <CardContent>
             “ Traveling can expose you to new environments and potential health risks, so it&apos;s crucial to take precautions to stay safe and healthy. ”
           </CardContent>
