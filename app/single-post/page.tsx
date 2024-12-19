@@ -1,3 +1,4 @@
+import BlogAds from '@/components/shared/blog-ads'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -54,11 +55,42 @@ export default function SinglePost() {
         </div>
         <Card className='w-full max-h-[128px] flex items-center justify-center p-8 bg-[#F6F6F7] dark:bg-[#242535] border-l-4   border-l-[#242535] dark:border-l-[#F6F6F7]'>
           <CardContent>
-          “ Traveling can expose you to new environments and potential health risks, so it&apos;s crucial to take precautions to stay safe and healthy. ”
+            “ Traveling can expose you to new environments and potential health risks, so it&apos;s crucial to take precautions to stay safe and healthy. ”
           </CardContent>
         </Card>
         <div className="relative  my-8">
           <Image src="/blog.png" className="w-full h-full" width={800} height={462} alt="blog-png" loading="lazy" />
+        </div>
+        <BlogAds />
+        <div className='my-8'>
+          <h1 className='text-[24px] font-bold mb-4'>Pack Lightly and Smartly</h1>
+          <span>
+            Packing can be a daunting task, but with some careful planning and smart choices, you can pack light and efficiently. Start by making a packing list and sticking to it, focusing on versatile and comfortable clothing that can be mixed and matched. Invest in quality luggage and packing organizers to maximize space and minimize wrinkles.
+          </span>
+        </div>
+        <div className='my-8'>
+          <h1 className='text-[24px] font-bold mb-4'>Stay Safe and Healthy</h1>
+          <span>
+            Traveling can expose you to new environments and potential health risks, so its crucial to take precautions to stay safe and healthy. This includes researching any required vaccinations or medications, staying hydrated, washing your hands frequently, and using sunscreen and insect repellent. Its also essential to keep your valuables safe and secure and to be aware of your surroundings at all times.
+          </span>
+        </div>
+        <div className='my-8'>
+          <h1 className='text-[24px] font-bold mb-4'>Immerse Yourself in the Local Culture</h1>
+          <span>
+            One of the most rewarding aspects of traveling is immersing yourself in the local culture and customs. This includes trying local cuisine, attending cultural events and festivals, and interacting with locals. Learning a few phrases in the local language can also go a long way in making connections and showing respect.
+          </span>
+        </div>
+        <div className='my-8'>
+          <h1 className='text-[24px] font-bold mb-4'>Capture Memories</h1>
+          <span>
+            Finally, dont forget to capture memories of your journey. Whether its through photographs, journaling, or souvenirs, preserving the moments and experiences of your travels can bring joy and nostalgia for years to come. However, its also essential to be present in the moment and not let technology distract you from the beauty of your surroundings.
+          </span>
+        </div>
+        <div className='my-8'>
+          <h1 className='text-[24px] font-bold mb-4'>Conclusion:</h1>
+          <span>
+            Traveling is an art form that requires a blend of planning, preparation, and spontaneity. By following these tips and tricks, you can make the most of your journey and create memories that last a lifetime. So pack your bags, embrace the adventure, and enjoy the ride.
+          </span>
         </div>
       </div>
     </div>
