@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
+
 import './globals.css'
 import { Providers } from '@/components/providers/Providers'
 
