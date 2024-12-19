@@ -10,8 +10,8 @@ const Source_Serif = Source_Serif_4({ subsets: ['latin'] })
 
 export default function SinglePost() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-6  '>
-      <div className='flex  flex-col my-10  md:col-start-2 md:col-span-4 '>
+    <div className='grid grid-cols-1 md:grid-cols-10  '>
+      <div className='flex  flex-col my-10  md:col-start-3 md:col-span-6 '>
         <div className='flex  flex-col max-w-[720px]'>
           <div className="mb-4">
             <Button className="text-white">Technology</Button>
