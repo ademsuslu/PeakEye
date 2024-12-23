@@ -5,7 +5,7 @@ import { Button } from '../ui/button'
 
 const Hero = () => {
     return (
-        <div className='hero min-h-[450px] flex  items-end'>
+        <div className='hero min-h-[450px] flex  items-end rounded-lg'>
             <div className='flex  flex-col max-w-[720px] m-10'>
                 <div className="mb-4">
                     <Button  className="text-white">Technology</Button>
