@@ -15,12 +15,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { handleCreateNewsletter } from "@/app/actions/create";
+import { FaCheck } from "react-icons/fa";
+import { CiCircleInfo } from "react-icons/ci";
 
 const formSchema = z.object({
   email: z.string().email("Lütfen geçerli bir e-posta adresi giriniz."),
 });
+import { useToast } from "@/hooks/use-toast"
+
 
 export function SubsForm() {
+  const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -30,15 +35,24 @@ export function SubsForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     form.reset();
-    try {
-    const res = await  handleCreateNewsletter(String(values?.email));
-    console.log("create")
-    console.log(res)
-    
-    } catch (error) {
-      console.error("Hata oluştu:", error);
-    
-    }
+   const res =  await  handleCreateNewsletter(String(values?.email));
+   toast({
+    title: "Newsletter ",
+    description: (
+      <>
+        {res.status === 200 ? (
+          <div className="inline-flex text-bold text-md">
+            {res.message}  <CiCircleInfo className="text-red-400 ml-2" />
+          </div>
+        ) : (
+          <div className="inline-flex text-bold text-md">
+            {res.message} <FaCheck className="text-green-400 ml-2" />
+          </div>
+        )}
+      </>
+    ),
+      })
+
   }
 
   return (
@@ -52,7 +66,8 @@ export function SubsForm() {
           name="email"
           render={({ field }) => (
             <FormItem className="w-full border-2 border-gray-600 rounded-md px-1 flex justify-center items-center">
-              <FormControl>
+            
+               <FormControl>
                 <Input
                   placeholder="Your Email"
                   className="border-none outline-none focus-visible:ring-0"
@@ -60,7 +75,7 @@ export function SubsForm() {
                 />
               </FormControl>
               <MdOutlineMailOutline className="w-8 h-8" />
-              <FormMessage />
+              <FormMessage className="text-sm" />
             </FormItem>
           )}
         />
