@@ -87,7 +87,7 @@ const Footer = () => {
       {/* bottom footer */}
       <div className='mt-16'>
         <hr />
-        <div className='flex flex-col md:flex-row justify-between items-center mt-8 gap-y-6 md:!gap-0'>
+        <div className='flex flex-col md:flex-row md:justify-between md:items-center mt-8 gap-y-6 md:!gap-0'>
           <Logo />
           <div className='flex gap-3 text-[#BABABF]'>
 
