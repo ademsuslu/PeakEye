@@ -15,7 +15,7 @@ const LastPostList = () => {
        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
            {
              Array.from({ length: 9 }, (_, index) => index + 1).map((index) => {
-                return <Card key={index} className="flex  flex-col p-0 m-0">
+                return <Card key={index} className="flex  flex-col p-0 m-0 hover:border-[#4B6BFB]">
                 <CardHeader className="">
                     <Image src="/blog.png" className="w-full h-full" width={360} height={240} alt="blog-png" loading="lazy" />
                 </CardHeader>

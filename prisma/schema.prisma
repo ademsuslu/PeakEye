@@ -12,3 +12,14 @@ model Newsletter {
   email     String   @unique
   createdAt DateTime @default(now())
 }
+
+model Blogs {
+  id         Int      @id @default(autoincrement())
+  category   String
+  desc       String
+  img        String
+  userAvatar String
+  userName   String
+  useeDate   String
+  createdAt  DateTime @default(now())
+}
