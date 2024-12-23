@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 const LastPostList = () => {
     return (
        <div className="flex flex-col">
-
+        <h1 className="text-[24px] font-bold mb-8">Latest Post</h1>
 
        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
            {
