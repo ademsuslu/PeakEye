@@ -71,7 +71,7 @@ export default function SinglePost() {
         <div className="relative  my-8">
           <Image src="/blog.png" className="w-full h-full" width={800} height={462} alt="blog-png" loading="lazy" />
         </div>
-        <BlogAds />
+        <BlogAds type="single" />
         <div className={ "mb-8"}>
 
           <h1 className='text-[24px] font-bold mb-4'>Pack Lightly and Smartly</h1>
