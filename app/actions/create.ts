@@ -24,3 +24,35 @@ export const handleCreateNewsletter = async (values: string) => {
         throw new Error("Email oluşturulamadı")
     }
 };
+type Blogs = {
+    category: string;
+    desc: string;
+    img: string;
+    userAvatar: string;
+    userName: string;
+    useeDate: string; // Tarihi string olarak alıyoruz (daha sonra `Date` nesnesine dönüştürülebilir)
+};
+
+export const handleCreateBlogs = async (data: Blogs) => {
+    const { category, desc, img, userAvatar, userName, useeDate } = data
+    try {
+
+        const blog = await prismadb.blogs.create({
+            data: {
+                category: category,
+                desc: desc,
+                img: img,
+                userAvatar: userAvatar,
+                userName: userName,
+                useeDate: useeDate,
+            },
+        });
+        return {
+            blog, message: "Blog oluşturuldu", status: 201
+        }
+
+    } catch (error) {
+        throw new Error("Email oluşturulamadı")
+    }
+};
+

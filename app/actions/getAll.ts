@@ -15,10 +15,10 @@ export const handleGetNewsletter = async () => {
 export const handleGetBlog = async () => {
     try {
         // blog ıcın degııstırılıcek
-        const emails = await prismadb.newsletter.findMany()
+        const Blogs = await prismadb.blogs.findMany()
 
         return {
-            emails, message: "Emails", status: 200
+            Blogs, message: "Blogs", status: 200
         }
 
     } catch (error) {

@@ -6,16 +6,20 @@ import {
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { blogs } from "@/data/data"
+import { Blogs } from "@prisma/client"
 
-const LastPostList = () => {
+interface BlogsProps {
+data:Blogs[]
+}
+
+const LastPostList:React.FC<BlogsProps> = ({data}) => {
     return (
        <div className="flex flex-col">
         <h1 className="text-[24px] font-bold mb-8">Latest Post</h1>
 
        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
-           {
-             blogs.map((item,index) => {
+            {
+             data?.map((item,index) => {
                 return <Card key={index} className="flex  flex-col p-0 m-0 hover:border-[#4B6BFB] transition-all">
                 <CardHeader className="">
                     <Image src={item.img} className="w-full h-full" width={360} height={240} alt="blog-png" loading="lazy" />
