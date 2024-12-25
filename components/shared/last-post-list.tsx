@@ -6,6 +6,7 @@ import {
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { blogs } from "@/data/data"
 
 const LastPostList = () => {
     return (
@@ -14,25 +15,25 @@ const LastPostList = () => {
 
        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
            {
-             Array.from({ length: 9 }, (_, index) => index + 1).map((index) => {
+             blogs.map((item,index) => {
                 return <Card key={index} className="flex  flex-col p-0 m-0 hover:border-[#4B6BFB] transition-all">
                 <CardHeader className="">
-                    <Image src="/blog.png" className="w-full h-full" width={360} height={240} alt="blog-png" loading="lazy" />
+                    <Image src={item.img} className="w-full h-full" width={360} height={240} alt="blog-png" loading="lazy" />
                 </CardHeader>
                 <CardContent className="flex flex-col justify-center items-start mt-4">
                     <div className="mb-4">
                         <Button className="text-[#4B6BFB] bg-[#4B6BFB] bg-opacity-10 hover:bg-[#4B6BFB] hover:bg-opacity-15">Technology</Button>
                     </div>
                     <h1 className=" text-[16px] md:text-[24px] font-bold   leading-tight">
-                        The Impact of Technology on the Workplace: How Technology is Changing
+                        {item.desc}
                     </h1>
                     <div className="flex items-center mt-5">
                         <Avatar className="w-9 h-9">
-                            <AvatarImage src="https://github.com/shadcn.png" />
-                            <AvatarFallback>TW</AvatarFallback>
+                            <AvatarImage src={item.userAvatar} />
+                            <AvatarFallback>{item.userName}</AvatarFallback>
                         </Avatar>
-                        <span className="ml-3 text-[12px] text-muted-foreground ">Tracey Wilson</span>
-                        <span className="ml-4 text-[12px] text-muted-foreground">August 20, 2022</span>
+                        <span className="ml-3 text-[12px] text-muted-foreground ">{item.userName}</span>
+                        <span className="ml-4 text-[12px] text-muted-foreground">{item.useeDate}</span>
 
                     </div>
                 </CardContent>
