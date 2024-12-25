@@ -8,13 +8,13 @@ datasource db {
 }
 
 model Newsletter {
-  id        Int      @id @default(autoincrement())
+  id        Int      @id @unique @default(autoincrement())
   email     String   @unique
   createdAt DateTime @default(now())
 }
 
 model Blogs {
-  id         Int      @id @default(autoincrement())
+  id         Int      @id @unique @default(autoincrement())
   category   String
   desc       String
   img        String

@@ -27,22 +27,23 @@ export const handleGetBlog = async () => {
 };
 
 export const handleGetBlogById = async (id: number) => {
-
-    // blog ıcın degııstırılıcek
-    const Blogs = await prismadb.blogs.findUnique({
+    const blog = await prismadb.blogs.findUnique({
         where: {
-            id: id
+            id: Number(id),
         },
-    })
-    if (!Blogs) {
+    });
 
+    if (!blog) {
         return {
-            Blogs, message: "Blog Not found", status: 404
+            blog: null,
+            message: "Blog not found",
+            status: 404
         }
     }
+
     return {
-        Blogs, message: "Blogs", status: 200
+        blog,
+        message: "Blog found",
+        status: 200
     }
-
 };
-
