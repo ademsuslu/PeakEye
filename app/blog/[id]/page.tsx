@@ -4,7 +4,7 @@ export default async function BlogPage({params}:{params:{id:number}}) {
   const res = await handleGetBlogById(params.id)
   return (
     <div>
-    {res.blog?.desc}
+     {res.blog?.desc}
     </div>
   )
 }
