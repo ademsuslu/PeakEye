@@ -21,7 +21,7 @@ const LastPostList: React.FC<BlogsProps> = ({ data }) => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 {
                     data?.map((item, index) => {
-                        return <Link  key={index} href={`/blog/${item.id}`}>
+                        return <Link  key={index} href="/single-post">
                             <Card className="flex  flex-col p-0 m-0 hover:border-[#4B6BFB] transition-all">
                                 <CardHeader className="">
                                     <Image src={item.img} className="w-full h-full" width={360} height={240} alt="blog-png" loading="lazy" />
