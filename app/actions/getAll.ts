@@ -22,6 +22,27 @@ export const handleGetBlog = async () => {
         }
 
     } catch (error) {
-        throw new Error("Email oluşturulamadı")
+        throw new Error("Not found")
     }
 };
+
+export const handleGetBlogById = async (id: number) => {
+
+    // blog ıcın degııstırılıcek
+    const Blogs = await prismadb.blogs.findUnique({
+        where: {
+            id: id
+        },
+    })
+    if (!Blogs) {
+
+        return {
+            Blogs, message: "Blog Not found", status: 404
+        }
+    }
+    return {
+        Blogs, message: "Blogs", status: 200
+    }
+
+};
+
